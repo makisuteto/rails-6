@@ -30,9 +30,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # ***** 以下を追加 *****
 gem 'faker'
-# ***** 以下を追加 *****
 gem 'kaminari'
-# ***** 以下を追加 *****
 gem 'ransack'
 
 group :development, :test do

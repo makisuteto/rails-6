@@ -3,7 +3,9 @@ class UsersController < ApplicationController
   PER_PAGE = 20
   
   def index
-     @q = User.ransack(params[:q])
-     @users = User.page(params[:page]).per(PER_PAGE)
+  # ***** 以下を修正 *****
+    @q = User.ransack(params[:q])
+    @users = @q.result.page(params[:page]).per(PER_PAGE)
+  # ***** 以上を修正 *****
   end
 end
